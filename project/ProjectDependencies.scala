@@ -87,7 +87,7 @@ object ProjectDependencies {
 
   private val tests = Seq(
     "org.scalameta" %% "munit" % "0.7.29" % Test,
-    "org.typelevel" %% "munit-cats-effect-3" % "1.0.7" % Test
+    "org.typelevel" %% "munit-cats-effect" % "2.0.0" % Test
   )
 
   // externals services
