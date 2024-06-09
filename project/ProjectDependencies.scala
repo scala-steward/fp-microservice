@@ -8,7 +8,7 @@ object ProjectDependencies {
   private val tapirVersion      = "1.2.5"
   private val pureConfigVersion = "0.17.2"
   private val doobieVersion     = "1.0.0-RC2"
-  private val fs2RabbitVersion  = "5.0.0"
+  private val fs2RabbitVersion  = "5.2.0"
   private val refinedVersion    = "0.10.1"
   private val circeVersion      = "0.14.3"
   private val slf4Version       = "2.0.6"
