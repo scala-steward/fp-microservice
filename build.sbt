@@ -5,7 +5,7 @@ lazy val appName               = "fp-microservice"
 lazy val appDescription        = "Basic template for microservices."
 lazy val appOrg                = "com.geirolz"
 lazy val appPackage            = s"$appOrg.$appName".replace(" ", "").replace("-", "")
-lazy val appScalaVersion       = "2.13.10"
+lazy val appScalaVersion       = "2.13.15"
 lazy val appDockerExposedPorts = Seq(8080)
 
 //------------------------------------------------------------------------------
