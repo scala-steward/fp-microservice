@@ -16,7 +16,7 @@ object AppBuilder {
     providedServicesBuilder: (CONFIG, SERVICES) => F[List[Resource[F, Unit]]]
   )(implicit c: MonadCancel[F, ?]): F[Unit] = {
 
-    val resLogger = logger.mapK(Resource.liftK[F])
+    val resLogger                                          = logger.mapK(Resource.liftK[F])
     val appResources: Resource[F, List[Resource[F, Unit]]] =
       for {
         // ------------------- CONFIGURATION ------------------
