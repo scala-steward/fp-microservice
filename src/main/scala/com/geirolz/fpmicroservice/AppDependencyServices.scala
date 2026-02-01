@@ -41,7 +41,7 @@ object AppDependencyServices {
   ): ResourceIO[HikariTransactor[IO]] =
     for {
       nonBlockingOpsECForDoobie <- ExecutionContexts.fixedThreadPool[IO](32)
-      transactor <- HikariTransactor.newHikariTransactor[IO](
+      transactor                <- HikariTransactor.newHikariTransactor[IO](
         driverClassName = dbConfig.driver.value,
         url             = dbConfig.url.value,
         user            = dbConfig.username.getOrElse(""),
@@ -63,7 +63,7 @@ object AppDependencyServices {
       )
       .evalMap(fl4s =>
         for {
-          _ <- logger.debug(s"Applying migration for ${dbConfig.name}")
+          _      <- logger.debug(s"Applying migration for ${dbConfig.name}")
           result <- fl4s.migrate.onError { ex =>
             logger.error(ex)(
               s"Unable to apply database ${dbConfig.name} migrations."

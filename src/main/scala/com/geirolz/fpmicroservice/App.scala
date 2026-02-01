@@ -21,7 +21,7 @@ object App extends IOApp.Simple {
     scalaVersion      = refine.unsafeFrom(BuildInfo.scalaVersion),
     sbtVersion        = refine.unsafeFrom(BuildInfo.sbtVersion),
     javaVersion       = NonEmptyString.from(System.getProperty("java.version")).toOption,
-    builtAt = LocalDateTime.ofInstant(
+    builtAt           = LocalDateTime.ofInstant(
       Instant.ofEpochMilli(BuildInfo.builtAtMillis),
       ZoneOffset.UTC
     ),
